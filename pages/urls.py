@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from pages.views import home_page_view
+from pages.views import HomePageView,AboutPageView
 
 urlpatterns = [
-    path('',home_page_view, name="home"),
+    path('', HomePageView.as_view(), name="home"),
+    path('about/', AboutPageView.as_view(), name="about"),
 ]
